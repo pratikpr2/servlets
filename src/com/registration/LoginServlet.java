@@ -7,6 +7,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class LoginServlet
  */
-@WebServlet("/LoginServlet")
+//@WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -44,10 +45,13 @@ public class LoginServlet extends HttpServlet {
 			
 			if(rs.next()) {
 				String user = rs.getString(1);
-				out.println("<html><body bgcolor='pink'><h1 align='center'>Welcome<h1><p align ='center'>"+user+"</p></body></html>");
+				RequestDispatcher dispatch=request.getRequestDispatcher("Profile.jsp");
 			}
 			else
-				out.println("<html><body bgcolor='pink'><h1 align='center'>Invalid User<h1><p align ='center'>Please Register</p></body></html>");
+				out.println("<html><body><head><body>\n" + 
+						"<div align=\"center\">\n" + 
+						"<img src=\"google.jpg\" alt=\"Image Logo\" width=\"160em\" height=\"100\">\n" + 
+						"</div></head><h2 align='center'>Invalid User</h2><p align ='center'>Please Register</p></body></html>");
 		}
 		catch(Exception e) {
 			e.printStackTrace();

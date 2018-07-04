@@ -21,7 +21,7 @@ LastName  : <input type="text" name="lastname" required ="required"><br>
 E-mail    :	<input type="text" name = "email" required="required"> <br>
 </div>
 <div align="center" style="width:180px">
-password  : <input type="text" name = "password" id ="myInput" required="required"><br>
+password  : <input type="password" name = "password" id ="myInput" required="required"><br>
 </div>
 <input type="checkbox" onclick="myFunction()">Show Password
 <script>

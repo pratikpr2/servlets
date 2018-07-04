@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -43,8 +44,9 @@ public class Registration extends HttpServlet {
 			ResultSet rs = st.executeQuery(search);
 			while(rs.next()) {
 				if(rs.getString(1).equals(email)) {
-					out=response.getWriter();
-					out.println("<html><body bgcolor='pink'><div align='center'><p>User Exists with Same Email Id</p><br><a href='index.html'>Go To Home</a></div></body></html>");
+					RequestDispatcher dispatch = request.getRequestDispatcher("/Home.jsp");
+					dispatch.include(request, response);
+					out.println("<html><div align='center'><p>User Already Exists<p></div></footer></html>");
 					return;
 				}
 			}
@@ -56,14 +58,13 @@ public class Registration extends HttpServlet {
 			
 			pst.executeUpdate();
 			
-			out = response.getWriter();
-			out.println("<html><body bgcolor='pink'>"+"<h2 align='center'>Welcome</h2><br>"+"<p align='center'>"+firstName+"</p></h1></body></html>");
-			out.close();
-			
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		RequestDispatcher dispatch = request.getRequestDispatcher("Profile.jsp");
+		dispatch.forward(request, response);
 	}
 
 }

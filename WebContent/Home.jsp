@@ -10,7 +10,7 @@
 <img src="google.jpg" alt="Image Logo" width="160em" height="100">
 </div>
 <div align="center" >
-<form action="logServlet" method="get">
+<form action="preLogin" method="get">
 <div align="center" style="width:180px">
 Email : <input type="text" name="email" required="required"/><br>
 </div>
@@ -32,7 +32,9 @@ function myFunction() {
 <br>
 <input type="submit" value="Login">
 </form>
-<a href="registration.html"><img src=signup.jpg width="50" width="50"/></a>
+<form action="preRegister" method="post">
+<input type="submit" value="Register">
+</form>
 </div>
 </body>
 </html>
