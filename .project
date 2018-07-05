@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>register&amp;login</name>
+=======
+	<name>Servlets</name>
+>>>>>>> 8b6af3245ea061b4bbe4777391b782cb188cfd3f
 	<comment></comment>
 	<projects>
 	</projects>

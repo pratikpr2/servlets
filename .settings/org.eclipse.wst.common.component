@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+<<<<<<< HEAD
     <wb-module deploy-name="register&amp;login">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <property name="context-root" value="registerandlogin"/>
         <property name="java-output-path" value="/register&amp;login/build/classes"/>
+=======
+    <wb-module deploy-name="Servlets">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="Servlets"/>
+        <property name="java-output-path" value="/Servlets/build/classes"/>
+>>>>>>> 8b6af3245ea061b4bbe4777391b782cb188cfd3f
     </wb-module>
 </project-modules>

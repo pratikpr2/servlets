@@ -32,9 +32,15 @@ function myFunction() {
 <br>
 <input type="submit" value="Login">
 </form>
+<<<<<<< HEAD
 <a href="Registration.jsp">
 <input type="submit" value="Register">
 </a>
+=======
+<form action="preRegister" method="post">
+<input type="submit" value="Register">
+</form>
+>>>>>>> 8b6af3245ea061b4bbe4777391b782cb188cfd3f
 </div>
 </body>
 </html>
