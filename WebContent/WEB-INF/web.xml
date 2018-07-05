@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>register&amp;login</display-name>
+  <welcome-file-list>
+    <welcome-file>/Home.jsp</welcome-file>
+    <welcome-file>/Registration.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>prelogin</servlet-name>
+    <servlet-class>com.bridgelabz.servlets.controller.PreLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>prelogin</servlet-name>
+    <url-pattern>/preLogin</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <filter-name>filter</filter-name>
+    <filter-class>com.bridgelabz.servlets.controller.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>filter</filter-name>
+    <url-pattern>/preLogin</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <servlet-name>profile</servlet-name>
+    <servlet-class>com.bridgelabz.servlets.controller.ProfileServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>profile</servlet-name>
+    <url-pattern>/getProfile</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>logout</servlet-name>
+    <servlet-class>com.bridgelabz.servlets.controller.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>logout</servlet-name>
+    <url-pattern>/Logout</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+  <servlet-name>register</servlet-name>
+  <servlet-class>com.bridgelabz.servlets.controller.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>register</servlet-name>
+  <url-pattern>/Register</url-pattern>
+  </servlet-mapping>
+  
+  <filter>
+  <filter-name>regFilter</filter-name>
+  <filter-class>com.bridgelabz.servlets.controller.RegistrationFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  <filter-name>regFilter</filter-name>
+  <url-pattern>/Register</url-pattern>
+  </filter-mapping>
+  
+</web-app>
